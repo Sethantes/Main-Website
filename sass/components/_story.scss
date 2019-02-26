@@ -1,0 +1,76 @@
+.story {
+  width: 75%;
+  margin: 3rem auto;
+  box-shadow: 0 3rem 6rem rgba($colour-black, .1);
+  background-color: rgba($colour-white, .6);
+  border-radius: 3px;
+  padding: 6rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg);
+  position: relative;
+
+  &__shape {
+    width: 8rem;
+    height: 8rem;
+    float: left;
+    transform: translateX(-2rem) skewX(12deg);
+
+    @supports (-webkit-shape-outside: circle(50% at 50% 50%)) or (shape-outside: circle(50% at 50% 50%)) {
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+
+      width: 15rem;
+      height: 15rem;
+      transform: translateX(-3rem) skewX(12deg);
+    }
+
+
+
+    @media (max-width: 25em) {
+      float: none;
+      margin: 0 auto;
+    }
+
+    //background-color: blue; //This is just so we can see where the picture will go
+  }
+
+  &__image {
+    width: 100%;
+    transform: scale(1.25);
+    transition: all .5s;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+
+    @media (max-width: 25em) {
+      display: inline-block;
+      transform: skewX(0);
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $colour-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__image {
+    transform: scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+}

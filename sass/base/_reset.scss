@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tl) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tp) {
+    font-size: 50%;
+  }
+
+  @include respond(bd) {
+    font-size: 75%;
+  }
+
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+
+  @include respond(tp) {
+    padding: 0;
+  }
+}

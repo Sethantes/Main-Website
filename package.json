@@ -1,0 +1,14 @@
+{
+  "name": "beachus",
+  "version": "1.0.0",
+  "description": "Getting the best holidays for you.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "author": "Dishaun Gordon",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
