@@ -88,15 +88,15 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
     &--1 {
-      background-image: url(../img/card-1.jpg);
+      background-image: url(../img/package-01.jpg);
     }
 
     &--2 {
-      background-image: url(../img/card-2.jpg);
+      background-image: url(../img/package-02.jpg);
     }
 
     &--3 {
-      background-image: url(../img/card-3.jpg);
+      background-image: url(../img/package-03.jpg);
     }
 
     @supports (background-blend-mode: soft-light) {
@@ -105,7 +105,7 @@
           to right bottom,
           $colour-secondary-light,
           $colour-secondary-dark
-        ), url(../img/card-1.jpg);
+        ), url(../img/package-01.jpg);
       }
 
       &--2 {
@@ -113,7 +113,7 @@
           to right bottom,
           $colour-primary-light,
           $colour-primary-dark
-        ), url(../img/card-2.jpg);
+        ), url(../img/package-02.jpg);
       }
 
       &--3 {
@@ -121,7 +121,7 @@
           to right bottom,
           $colour-tertiary-light,
           $colour-tertiary-dark
-        ), url(../img/card-3.jpg);
+        ), url(../img/package-03.jpg);
       }
     }
   }
